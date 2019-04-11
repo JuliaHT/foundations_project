@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style navbar */
+  .bodystyle {
+      margin: 0;
+  }
+  
+  .logo {
+      width: 40px;
+      margin-left: 5%;
+      float: left;
+      padding:0; 
+  }
+  
+  #navbar {
+    background-color: #ffffff;
+    opacity: 0.84;
+    font-family: serif;
+    font-size: 22;
+    padding: 15px 0;
+    color:#222a34;
+  } 
+  
+  #navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    margin: 0 200px;
+  }
+  
+  /* Style container */
+  
+  #outerContainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 30px;
+    background-color: white;
+  }
+  
+  #outerContainer .card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #222a34;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    }
+  
+  .icon {
+    height:30px ;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    margin-top: auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: flex;
+  } 
+  
+  .title {
+    margin-left: auto;
+    background-color: rgba(0,0,0,0.5);  
+    height: 25px;
+    padding: 4px 8px 4px 8px; 
+    text-align: center;   
+    border-radius: 8px;
+    margin-top: 8px;
+    margin-right: 8px;
+    color: white;
+  }
+
+  /* exercise style */ 
+  .icon {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    background-color: aqua;
+  }
+
+  .info {
+    width: 400px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    display: flex;
+    flex-flow: column;
+    padding: 40px 40px 0px 40px;
+  }
+  h1 {
+    text-align: center;
+    color:#3071A9;
+    margin: 0;
+  }
+  h2 {
+    text-align: center;
+    color: #222a34;
+  }
+  
+  h3 {
+    text-align: center;
+    color: #222a34;
+    border: none;
+  }
+  .info button {
+  border: none;
+  line-height: 3em;
+  background-color: #4d394b;
+  color: white;
+  border-radius: 5px;
+  }
+  
+  }
+  .link {
+    text-decoration: none;
+    color: white;
+  }
