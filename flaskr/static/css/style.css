@@ -62,6 +62,10 @@
     color: white;
     display: flex;
   } 
+
+#icon .img {
+    
+}
   
   .title {
     margin-left: auto;
@@ -83,7 +87,7 @@
     height: 200px;
     width: 200px;
     border-radius: 100px;
-    background-color: aqua;
+    background-color: #FF9900;
   }
 
   .info {
@@ -118,8 +122,7 @@
   color: white;
   border-radius: 5px;
   }
-  
-  }
+
   .link {
     text-decoration: none;
     color: white;

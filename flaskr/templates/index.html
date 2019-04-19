@@ -6,7 +6,7 @@
   <title>groot | Home</title>
 
   <!-- Import styles-->
-  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
   <!-- Import fonts -->
 </head>
 <body class="bodystyle">
@@ -20,12 +20,12 @@
             <a>Login</a>
         </li> 
           <li >
-                <a>sign up</a>
+                <a>Sign up</a>
             </li> 
     </ul>
 </div>
   </nav>
-  
+
   <section>
   <div>
     <h1>All challenges</h1> 
@@ -34,8 +34,8 @@
   </section>
   
   <section id="outerContainer">
-        <a href="hellostranger.html" style="text-decoration:none;">      
-    <div class="card" style="background-size:cover">
+        <a href="hellostranger.html">      
+    <div class="card">
         
       <div class="icon" style="background-image:url('assets/stranger.PNG');">
       </div>
