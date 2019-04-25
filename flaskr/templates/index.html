@@ -1,14 +1,15 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>groot | Home</title>
-
   <!-- Import styles-->
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-  <!-- Import fonts -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
+
 <body class="bodystyle">
   <nav id="navbar">
 <div class="display:inline-block">
@@ -17,35 +18,41 @@
         <a>groot</a>  
       </li> 
         <li>
-            <a>Login</a>
+            <a href="/login">Login</a>
         </li> 
-          <li >
-                <a>Sign up</a>
-            </li> 
     </ul>
 </div>
-  </nav>
+</nav>
 
-  <section>
-  <div>
-    <h1>All challenges</h1> 
-    <h3>Choose freely whatever challenge is most intriguing to you.</h3>
-  </div>
-  </section>
-  
-  <section id="outerContainer">
-        <a href="hellostranger.html">      
-    <div class="card">
-        
-      <div class="icon" style="background-image:url('assets/stranger.PNG');">
-      </div>
-      <div class="title">
-        Hello Stranger       
-      </div>  
-     
+<section  id="outerContainer">
+    <body>
+        <div>
+            <h1>All challenges</h1> 
+            <h3>Choose freely whatever challenge is most intriguing to you.</h3>
+        </div>
+</section>
+
+<section id="outerContainer">
+{% for i in challenge_overview %}
+  <div class="card" onclick="pop({{ i[3] }})">
+   <h3><span>{{ i[0] }}</span>
+    <span class="subline">{{ i[1] }}</span>
+    </h3>
+
+    <div class="popup">Click to see description of challenge.<span class="popuptext" id="{{ i[3] }}">{{i[2]}}</span>
     </div>
-        </a>
-  </section> 
+    <div> <button>Mission complete</button> </div>
+  </div>
+{% endfor %}
+</section>
+
+<script>
+    // When the user clicks on <div>, open the popup
+    function pop(id) {
+      var popup = document.getElementById(id);
+      popup.classList.toggle("show");
+    }
+  </script>
 
 </body>
 </html>

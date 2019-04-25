@@ -1,14 +1,17 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>groot | Task</title>
+  <title>groot | Challenge</title>
 
   <!-- Import styles-->
-  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
   <!-- Import fonts -->
+	<link rel="shortcut icon" href="one_copy.ico">
 </head>
+
 <body class="bodystyle">
   <nav id="navbar">
 <div class="display:inline-block">
@@ -26,19 +29,21 @@
 </div>
   </nav>
 
-    <div class="icon" style="background-image:url('assets/stranger.PNG'); background-size:cover"></div>
+{% block content %}
 
-    <div class="info">
-    <h1>Hello Stranger</h1>
-    <h2>Talk to a stranger for at least 5 minutes.</h2>
-    <h3>Approach a stranger in your surrounding. Start a conversation with her/him. 
-        Here are some questions you can ask to get your started:
-        1) What are your hobbies?
-        2) What are you most excited for this week?
-        3) Where did you travel during your last vacation?
-    </h3>
-      <button>Mission complete</button>
-    </div>
+	<h2>{{title}}</h2>
+  <h3>{{level}}</h3>
+
+ 	<div class="challenge">
+    	<p>{{challenge}}</p>
+   </div>
+
+{% endblock %}
+
+  <div> <button>Mission complete</button> </div>
+
+  <h4><a href = "\"> Back </a></h4>
 
 </body>
 </html>
+
