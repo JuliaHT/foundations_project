@@ -7,7 +7,6 @@
   <title>groot | Home</title>
   <!-- Import styles-->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-
 </head>
 
 <body class="bodystyle">
@@ -15,7 +14,7 @@
 <div class="display:inline-block">
     <ul>
       <li>
-        <a>groot</a>  
+        <a id="groot">groot</a>  
       </li> 
         <li>
             <a href="/login">Login</a>
@@ -33,15 +32,15 @@
 </section>
 
 <section id="outerContainer">
-{% for i in challenge_overview %}
-  <div class="card" onclick="pop({{ i[3] }})">
-   <h3><span>{{ i[0] }}</span>
-    <span class="subline">{{ i[1] }}</span>
+{% for challenge in challenge_overview %}
+  <div class="card" id="card-{{ challenge[3] }}">
+   <h3><span>{{ challenge[0] }}</span>
+    <span class="subline">{{ challenge[1] }}</span>
     </h3>
 
-    <div class="popup">Click to see description of challenge.<span class="popuptext" id="{{ i[3] }}">{{i[2]}}</span>
+    <div class="popup"  onclick="pop({{ challenge[3] }})">Click here to see description of challenge.<span class="popuptext" id="{{ challenge[3] }}">{{challenge[2]}}</span>
     </div>
-    <div> <button>Mission complete</button> </div>
+    <div> <button id="button" onclick="onComplete({{ challenge[3] }})">Mission complete</button> </div>
   </div>
 {% endfor %}
 </section>
@@ -50,7 +49,14 @@
     // When the user clicks on <div>, open the popup
     function pop(id) {
       var popup = document.getElementById(id);
+      var allPopups = document.querySelector(".popuptext");
       popup.classList.toggle("show");
+    }
+
+    // When the user completes a challenge, make the div grey
+    function onComplete(id) {
+      var card = document.getElementById("card-"+id);
+      card.classList.toggle("completed");
     }
   </script>
 

@@ -11,7 +11,6 @@ def groot():
     FROM challenges
     INNER JOIN levels ON challenges.Level=levels.Level;
     """)
-    # make div clickable and link to new page
 
     return render_template("index.html", challenge_overview = challenge_overview)
 
@@ -40,15 +39,8 @@ def login():
                 else: 
                     return("The password is incorrect. Please try again.")
             # if username is inaccurate return login page
-            else:
-                return("The username is incorrect. Please try again.")
         else:
-            return("Wrong login information.")
-
-        print(user_info)
-        return "working"
-
-      
+            return("Wrong login information.")      
 
 if __name__ == "__main__":
     app.run()
